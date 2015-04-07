@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title></title>
+  <meta charset="UTF-8">
+  <title></title>
 </head>
 <body>
 <table>
   <tr>
-    <td>Time <td>
+    <th>Time <th>
     <td>7:00 AM</td>  
     <td>8:00 AM </td>
     <td> 9:00 AM </td>
@@ -22,19 +22,29 @@
     <td>6:00 PM </td>
     <td>Total </td>
   <tr id='Downtown'>
+    <th>Downtown</th>
+    <td> </td>
   </tr>
 <tr id='Capitol Hill'>
+  <th>Capitol Hill</th>
+  <td> </td>
   </tr>
 <tr id='South Lake Union'>
+  <th>South Lake Union</th>
+  <td> </td>
   </tr>
 <tr  id='Wedgewood'>
+  <th>Wedgewood</th>
+  <td> </td>
   </tr>
 <tr id='Ballard'>
+  <th>Ballard</th>
+  <td> </td>
   </tr>
 
 </table>
 
-	<main id="content"></main>
+  <main id="content"></main>
 
   <script>
     var donutShoppe = function(location,min,max,adpp) {
@@ -42,55 +52,48 @@
      this.min = min;
      this.max = max;
      this.adpp = adpp;
-     this.hourlyDonuts
-     
+     this.hourlyDonuts = []
    }
 
+    donutShoppe.prototype.donutsPerHour = function(){
+      var customers = Math.floor(Math.random() * this.max - this.min + 1) + this.min;
+    return Math.round(customers * this.adpp);
+      };
+      
+   
+
+    donutShoppe.prototype.numDonutsDay = function(){
+      var donutDay = 0;
+      for (var i = 7; i <= 18; i++){
+        var donutsPerHr = this.donutsPerHour();
+        this.hourlyDonuts.push(donutsPerHr);
+        donutDay += donutsPerHr;
+      }
+      return donutDay;
+    }
+    donutShoppe.prototype.render = function(){
+      var totalDonuts = this.numDonutsDay()
+        var elTr = document.getElementById(this.location);
+        for (var i = 0; i<= this.hourlyDonuts.length;i++) {
+          var el = document.createElement('td');
+          el.textContent = this.hourlyDonuts[i];
+          elTr.appendChild(el);
+        }
+        el.textContent = totalDonuts;
+        elTr.appendChild(el);
+      }
     
     var dT = new donutShoppe('Downtown',8,43,4.5);
     var cH = new donutShoppe('Capitol Hill',4,37,2);
     var sLU = new donutShoppe('South Lake Union', 9, 23, 6.33);
     var wW = new donutShoppe('Wedgewood', 2, 28, 1.25);
     var bD = new donutShoppe ('Ballard', 8,58, 3.75);
-    var totalDonuts = []
-    var array;
-
-    donutShoppe.prototype.donutsPerHour = function(min,max,adpp){
-      array = [];
-      var myTotal = 0;
-      for (var i = 7; i<=18; i++){
-        var hourlyDonuts = (Math.floor(Math.random()*(this.max-this.min)+ this.min)*this.adpp);
-        array.push(hourlyDonuts);
-      }
-      return array;
-    }
-   
-
-    donutShoppe.prototype.numDonutsDay = function(customers, adpp){
-      var donutDay = 0;
-      for (var i=0; i<array.length; i++){
-        donutDay +=array[i];
-      }
-      return donutDay;
-    }
-
-    donutShoppe.prototype.render = function(){
-      var el = document.getElementById(this.location);
-        
-      //I don't know where to go from here
-    };
-
-
-    console.log(dT.donutsPerHour());
-    console.log(cH.donutsPerHour());
-    console.log(sLU.donutsPerHour());
-    console.log(wW.donutsPerHour());
-    console.log(bD.donutsPerHour());
-    console.log(dT.numDonutsDay());
-
-
-
-
+    dT.render();
+    cH.render();
+    sLU.render();
+    wW.render();
+    bD.render();
+  ;
       </script>
 </body>
 </html>
