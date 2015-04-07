@@ -1,4 +1,4 @@
-  <script>
+
     var donutShoppe = function(location,min,max,adpp) {
      this.location = location;
      this.min = min;
@@ -46,4 +46,3 @@
     wW.render();
     bD.render();
   ;
-      </script>
