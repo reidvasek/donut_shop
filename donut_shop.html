@@ -7,7 +7,7 @@
 <body>
 <table>
   <tr>
-    <th>Time <th>
+    <th>Location <th>
     <td>7:00 AM</td>  
     <td>8:00 AM </td>
     <td> 9:00 AM </td>
@@ -19,33 +19,26 @@
     <td>3:00 AM </td>
     <td>4:00 AM</td>  
     <td>5:00 PM </td>
-    <td>6:00 PM </td>
     <td>Total </td>
-  <tr id='Downtown'>
-    <th>Downtown</th>
-    <td> </td>
-  </tr>
-<tr id='Capitol Hill'>
-  <th>Capitol Hill</th>
-  <td> </td>
-  </tr>
-<tr id='South Lake Union'>
-  <th>South Lake Union</th>
-  <td> </td>
-  </tr>
-<tr  id='Wedgewood'>
-  <th>Wedgewood</th>
-  <td> </td>
-  </tr>
-<tr id='Ballard'>
-  <th>Ballard</th>
-  <td> </td>
-  </tr>
+  <tbody id="bodyTable">
+  </tbody>
 
 </table>
+ <form id="donutForm">
+      <label for="location">Location</label>
+      <input id="location" type="text">
+      <label for="max">Max</label>
+      <input id="max" type="text">
+      <label for="min">Min</label>
+      <input id="min" type="text">
+      <label for="adpp">ADPP</label>
+      <input id="adpp" type="text">
+
+      <button type="submit">Save location</button>
 
   <main id="content"></main>
-<script src="donut.js"></script>
+<script src="event.js"></script>
+<script src = "donutshop2.0.js"></script>
 
 </body>
 </html>
