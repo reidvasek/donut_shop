@@ -4,15 +4,39 @@
 }
 
 
+.moardonuts{
+  font-size:2em;
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-top:30px;
+  text-decoration:underline;
+  color:#0000CD;
+  text-shadow: 0.5px 0.5px black;
+}
+
+aside{
+	border:1px solid;
+	
+	border-radius:9px;
+	background-color:orange;
+	position:fixed;
+	display:block;
+	margin-left:84.5%;
+	z-index: 12;
+
+
+}
+
 .dinopic{
 	margin-left:35%;
 	padding-right:35%;
-	margin-top:80px;
+	margin-top:5%;
 	width:20%;
 	position:relative;
-	
-	
+}
 
+section{
+	float:left;
 }
 
 h1{
@@ -20,21 +44,31 @@ h1{
 	font-family: 'Rock Salt', fantasy;
 	font-size: 3em;
 	text-align: center;
-	color:#FFA500;
+	color:#B0E0E6;
 	text-shadow: 4px 4px black;
 	margin-bottom: 100px
 }
+
+h3{
+	color:black;
+	font-family:helvetica;
+	margin-left:2.5%;
+	margin-right: 15%;
+	text-shadow: 1px 1px black;
+	padding-top:30px;
+	position:relative;
+}
+
 
 body{
 	background-color:lightgreen;
 }
 form{
 	border:2px solid;
-	width:25%;
+	width:45%;
 	margin-top:30px;
 	background-color: lightgreen;
 	border-radius: 9px;
-	float:left;
 }
 input{
 	background-color:#FFEFD5;
@@ -44,8 +78,6 @@ input{
 table{
 	background-color: #00FFB6;
 	width:60%;
-	margin-left:20%;
-	margin-right:20%;
 	margin-top:30px;
 	border-radius:9px;
 	border-style:2px solid;
