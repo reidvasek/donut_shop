@@ -8,7 +8,7 @@
    }
 
     donutShoppe.prototype.custGen = function(){
-      return Math.floor(Math.random() * this.max - this.min + 1) + this.min;
+      return Math.floor(Math.random() * ((this.max - this.min) + 1) + this.min);
       };
 
       

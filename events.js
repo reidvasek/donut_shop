@@ -8,9 +8,9 @@ var handleFormSubmit = function(event){
 	if (!event.target.location.value)  {
             return alert('location cannot be blank');
         }
-    if (event.target.max.value <event.target.min.value)   {
-    	return alert('maximum value needs to be greater than mininmum value');
-    } 
+   // if (event.target.max.value <event.target.min.value)   {
+    	//return alert('maximum value needs to be greater than mininmum value');
+    //} 
     if (event.target.max.value <= 0 || event.target.min.value <= 0){
     	return alert('Error, value needs to be greater than 0')
     }
@@ -18,7 +18,7 @@ var handleFormSubmit = function(event){
     	return alert ('Hopefully the customer would at least buy a donut')
     }
 
-        var newLocation = new donutShoppe(event.target.location.value, event.target.min.value, event.target.max.value, event.target.adpp.value);
+        var newLocation = new donutShoppe(event.target.location.value,  event.target.min.value, event.target.max.value, event.target.adpp.value);
 		event.target.location.value = null;
 		event.target.min.value = null;
 		event.target.max.value = null;
