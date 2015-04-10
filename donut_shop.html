@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
+<head >
+  <header class="donuts">
+   <meta charset="UTF-8">
+   <div class="main-header">
+   <h1>Dino Donuts</h1>
+   <img src="dino.png" alt="cool dino" class="dinopic">
+  <link rel = "stylesheet" type = "text/css" href = "style.css"></link>
+  <link href='http://fonts.googleapis.com/css?family=Patrick+Hand' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Metamorphous' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+  <link href='http://www.dafont.com/olde-english.font/css?family=Olde+English' rel='stylesheet' type = 'text/css'>
+</div>
+ </header>
 </head>
 <body>
+ 
+    <form id="donutForm">
+  
+      <label for="location">Location:</label>
+      <input id="location" type="text"> 
+      <label for="max">Max customers:</label>
+      <input id="max" type="text">  
+      <label for="min">Mincustomers:</label>
+      <input id="min" type="text">
+      <label for="adpp">Average donuts/customer:</label>
+      <input id="adpp" type="text">
+      <button type="submit">Donuts!</button>
+    </form>
+  
 <table>
-  <tr>
+  <tr id="123">
     <th>Location <th>
     <td>7:00 AM</td>  
     <td>8:00 AM </td>
@@ -19,26 +43,15 @@
     <td>3:00 AM </td>
     <td>4:00 AM</td>  
     <td>5:00 PM </td>
-    <td>Total </td>
+    <th>Total Donuts </td>
   <tbody id="bodyTable">
   </tbody>
 
 </table>
- <form id="donutForm">
-      <label for="location">Location</label>
-      <input id="location" type="text">
-      <label for="max">Max</label>
-      <input id="max" type="text">
-      <label for="min">Min</label>
-      <input id="min" type="text">
-      <label for="adpp">ADPP</label>
-      <input id="adpp" type="text">
-
-      <button type="submit">Save location</button>
-
+ 
   <main id="content"></main>
-<script src="event.js"></script>
-<script src = "donutshop2.0.js"></script>
+<script src="events.js"></script>
+<script src = "donut.js"></script>
 
 </body>
 </html>
