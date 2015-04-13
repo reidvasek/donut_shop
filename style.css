@@ -1,7 +1,28 @@
+
+
+.inline{
+    display:inline;
+    text-decoration:none;
+    color:red;
+    font-size: 2em;
+    padding:10px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    color:blue;
+}
+a:visited{
+    color:red;
+}
 *{
 	text-align: center;
 	;
 }
+
 
 
 .moardonuts{
@@ -35,6 +56,15 @@ aside{
 	position:relative;
 }
 
+.dinopic:hover{
+	 -webkit-animation: swing 2s ease;
+        animation: swing 2s ease;
+        -webkit-animation-iteration-count: 9;
+        animation-iteration-count: 9;
+        opacity:1;
+
+}
+
 section{
 	float:left;
 }
@@ -65,7 +95,6 @@ body{
 }
 form{
 	border:2px solid;
-	width:45%;
 	margin-top:30px;
 	background-color: lightgreen;
 	border-radius: 9px;
@@ -117,3 +146,69 @@ button:active {
   color: lightcoral;
 }
 
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-50px);
+       transform: translateX(-50px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(25px);
+        transform: translateX(25px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(25px);
+        transform: translateX(25px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
