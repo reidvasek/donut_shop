@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head >
+  <span>
+    <ul >
+      <li class="inline"> <a href="donut_shop.html"> Home </a></li>
+      <li class="inline"> <a href="about_donut_shop.html"> About</a></li>
+      <li class="inline"> <a href="products_donut_shop.html"> Products</a></li>
+      <li class="inline"> <a href="contact_donut_shop.html"> Contact</a></li>
+    </ul>
+  </span>
   <header class="donuts">
    <meta charset="UTF-8">
    <div class="main-header">
     <h1>Dino Donuts</h1>
     <aside> 
      <h5> Check us out!</h5> 
-     <a href="http://facebook.com/reidvasek"><img src="facebook-wrap.png" alt="Facebook Logo"> </a>
+     <a href="https://www.facebook.com/thebasicvasek"><img src="facebook-wrap.png" alt="Facebook Logo"></a>
      <a href="http://twitter.com/Reid_Vasek"><img src="twitter-wrap.png" alt="Twitter Logo"></a>
      <h5> Contact us!</h5>
      <a href="mailto:vasekrs@gmail.com"> <img src = "mail.png" alt="mail Reid"></a>
@@ -25,21 +33,21 @@
 <body>
   <h3 id="intro"> At dino donuts we serve prehistorically delicious donuts that will delight the whole family! We have something for the little triceratops in your family to the big Tyrannasaurus Rex's. </h3>
 
-  <a class ="moardonuts" href="#donutz"> MMM... Its donut time!!!</a>
+  <a class ="moardonuts" id="moardonuts" href="#donutForm"> Use the donut Calculator</a>
   <article>
 
  <section>
 
     <form id="donutForm">
   
-      <label for="location">Location:</label>
-      <input id="location" type="text"> 
-      <label for="max">Max customers:</label>
-      <input id="max" type="text">  
-      <label for="min">Mincustomers:</label>
-      <input id="min" type="text">
-      <label for="adpp">Average donuts/customer:</label>
-      <input id="adpp" type="text">
+      <label for="location" class="letItFloat">Location:</label>
+      <input id="location" class="toTheRight" type="text"> 
+      <label for="max" class="letItFloat">Max customers:</label>
+      <input id="max" class="toTheRight" type="text">  
+      <label for="min" class="letItFloat">Mincustomers:</label>
+      <input id="min" class="toTheRight" type="text">
+      <label for="adpp" class="letItFloat">Average donuts/customer:</label>
+      <input id="adpp" class="toTheRight" type="text">
       <button type="submit">Donuts!</button>
     </form>
 
